@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦖 Gesture Dino - Hand Controlled Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Game Title Header -->
+    <div class="header">
+        <h1 class="game-title">🦖 GESTURE DINO RUNNER 🦖</h1>
+        <p class="subtitle">Control with hand gestures • Make a fist to jump!</p>
+    </div>
+
+    <!-- Score Panel (Left Side) -->
+    <div class="score-panel">
+        <div class="stat-card">
+            <div class="stat-label">SCORE</div>
+            <div class="stat-value" id="scoreDisplay">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">BEST</div>
+            <div class="stat-value" id="bestDisplay">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">LIVES</div>
+            <div class="stat-value hearts" id="livesDisplay">❤️❤️❤️❤️❤️</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">TIME</div>
+            <div class="stat-value" id="timeDisplay">0s</div>
+        </div>
+    </div>
+
+    <!-- Game Canvas (Center) -->
+    <canvas id="game"></canvas>
+
+    <!-- Camera Feed (Bottom Right) -->
+    <div class="camera-container">
+        <div class="camera-label">📹 HAND DETECTION</div>
+        <video id="camera" autoplay playsinline></video>
+        <canvas id="overlay"></canvas>
+        <div class="gesture-indicator" id="gestureIndicator">
+            <span id="gestureText">Open Hand 🖐️</span>
+        </div>
+    </div>
+
+    <!-- Footer with Links -->
+    <div class="footer">
+        <a href="https://github.com/Shivamgarud8" target="_blank" class="footer-link">
+            <span class="icon">💻</span> GitHub
+        </a>
+        <a href="https://shivam-garud.vercel.app/" target="_blank" class="footer-link">
+            <span class="icon">🌐</span> Portfolio
+        </a>
+        <a href="https://www.linkedin.com/in/shivam-garud/" target="_blank" class="footer-link">
+            <span class="icon">👔</span> LinkedIn
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
