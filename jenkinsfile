@@ -103,6 +103,7 @@ pipeline {
     post {
         success {
             echo "✅ Deployment complete — copy the HTTPS ngrok URL above and open in browser."
+            echo "Enjoy Your Game  link :   https://uncertificated-untrembling-lance.ngrok-free.dev/ "
         }
         failure {
             echo "❌ Pipeline failed — check Jenkins logs."
