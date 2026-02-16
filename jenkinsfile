@@ -6,7 +6,7 @@ pipeline {
         // TARGET SERVER DETAILS
         // =========================
         TARGET_USER = "ubuntu"
-        TARGET_IP   = "16.171.162.109"
+        TARGET_IP   = "56.228.22.165"
 
         // =========================
         // APPLICATION DETAILS
